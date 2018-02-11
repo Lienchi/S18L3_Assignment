@@ -140,6 +140,12 @@
   bottom: 150px;
 }
 
+#hero-image-block    .character-block .hurt-text.healed,
+#monster-image-block .character-block .hurt-text.healed {
+  color: green;
+  bottom: 150px;
+}
+
 #hero-image-block .skill-block {
   position: relative;
 }
