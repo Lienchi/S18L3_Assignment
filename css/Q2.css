@@ -140,11 +140,13 @@
   bottom: 150px;
 }
 
+/* Q2 */
 #hero-image-block    .character-block .hurt-text.healed,
 #monster-image-block .character-block .hurt-text.healed {
   color: green;
   bottom: 150px;
 }
+/* End of Q2 */
 
 #hero-image-block .skill-block {
   position: relative;

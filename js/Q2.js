@@ -82,7 +82,7 @@ class Hero extends BaseCharacter {
         this.hp = this.maxHp;
       }
       this.updateHtml(this.hpElement, this.hurtElement);
-
+      /* Q2 */
       var _this = this;
       var i = 1;
 
@@ -102,6 +102,7 @@ class Hero extends BaseCharacter {
 
 
       }, 50);
+      /* End of Q2 */
     }
   }
 
