@@ -1,3 +1,16 @@
+var bladeImgArray = new Array(8);
+var healImgArray = new Array(8);
+
+function loadImages() {
+  for(var i=0; i<8; i++) {
+    bladeImgArray[i] = new Image();
+    bladeImgArray[i].src = 'images/effect/blade/' + (i+1) + '.png';
+    healImgArray[i] = new Image();
+    healImgArray[i].src = 'images/effect/heal/' + (i+1) + '.png';
+  }
+}
+loadImages();
+
 class BaseCharacter {
   constructor(name, hp, ap) {
     this.name = name;
@@ -31,7 +44,7 @@ class BaseCharacter {
         _this.element.getElementsByClassName("hurt-text")[0].textContent = damage;
       }
 
-      _this.element.getElementsByClassName("effect-image")[0].src = 'images/effect/blade/' + i + '.png';
+      _this.element.getElementsByClassName("effect-image")[0].src = bladeImgArray[i-1].src;
       i++;
       if (i > 8) {
         _this.element.getElementsByClassName("effect-image")[0].style.display = "none";
@@ -94,7 +107,7 @@ class Hero extends BaseCharacter {
           _this.element.getElementsByClassName("hurt-text")[0].textContent = 30;
         }
 
-        _this.element.getElementsByClassName("effect-image")[0].src = 'images/effect/heal/' + i + '.png';
+        _this.element.getElementsByClassName("effect-image")[0].src = healImgArray[i-1].src;
         i++;
         if (i > 8) {
           _this.element.getElementsByClassName("effect-image")[0].style.display = "none";
